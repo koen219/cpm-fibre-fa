@@ -73,6 +73,7 @@ endif  # ENABLE_MPI
 
 $(VENV):
 	python3 -m venv venv
+	venv/bin/python3 -m pip install -e lib/ecmgen
 
 $(VENV_NUMPY): $(VENV)
 	. venv/bin/activate && python3 -m pip install numpy
